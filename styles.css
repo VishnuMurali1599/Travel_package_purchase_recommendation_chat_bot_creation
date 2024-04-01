@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('https://www.datocms-assets.com/39504/1632397779-f37logos.png'); /* Add your background image path here */
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    position: relative;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  header {
+    text-align: center;
+    color: black;
+    margin-top: 50px; /* Adjust as needed */
+  }
+  
+  .title {
+    font-size: 3em;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .subtitle {
+    font-size: 1.5em;
+    margin-top: 10px; /* Adjust as needed */
+    font-weight: bold;
+  }
+  
+  nav {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    display: inline;
+    margin: 0 10px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em;
+    border-bottom: 2px solid transparent; /* Add an underline effect */
+  }
+  
+  a:hover {
+    border-color: #00bfff; /* Change color on hover */
+  }
+  
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: yellow; /* Changing background color to yellow */
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  
+  footer p {
+    font-size: 0.8em;
+    color: #555;
+    font-weight: bold;
+  }
+  

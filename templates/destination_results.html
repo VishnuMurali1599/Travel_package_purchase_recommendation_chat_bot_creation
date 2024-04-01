@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destination Results</title>
+    <style>
+        /* Add your CSS styles here */
+        /* Add your CSS styles here */
+        body {
+            font-family: 'Roboto', sans-serif; /* Change the font */
+            background-color: #ffffcc; /* Light yellow background color */
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #d9ef1b;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow-x: auto; /* Allow horizontal scrolling if content overflows */
+        }
+        
+        h1 {
+            font-family: 'Arial', sans-serif; /* Change the font */
+            font-size: 24px; /* Increase the font size */
+            text-align: center;
+            color: #333;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            font-family: 'Roboto', sans-serif; /* Change the font */
+            font-size: 16px; /* Increase the font size */
+        }
+        
+        th {
+            background-color: #f2f2f2;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Destination Results</h1>
+        <!-- Display the DataFrame HTML -->
+        {{ data|safe }}
+    </div>
+</body>
+</html>

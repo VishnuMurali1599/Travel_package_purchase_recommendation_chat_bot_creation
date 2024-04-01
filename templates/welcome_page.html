@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Travel Packages</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://www.bandt.com.au/information/uploads/2021/04/Expedia-logo-1260x840.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: 'Poppins', sans-serif;
+            color: black;
+        }
+        header {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 20px;
+        }
+        header h1 {
+            font-size: 2rem;
+            margin-left: 20px;
+            color: #000000;
+        }
+        nav {
+            margin-left: auto;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        nav li {
+            margin-right: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #000;
+            font-weight: 1000;
+            font-size: 1.0rem;
+        }
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: calc(70vh - 100px);
+            text-align: center;
+            margin-top: 20px; /* Adjust to move content slightly below */
+        }
+        main p {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            font-family: 'Poppins', sans-serif; /* Use Google Fonts for cute fonts */
+        }
+        form {
+            margin-top: 20px;
+        }
+        input[type="text"] {
+            padding: 8px;
+            font-size: 1rem;
+        }
+        button {
+            padding: 8px 20px;
+            font-size: 1rem;
+            background-color: #ffcc00;
+            color: #333;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>VM Tours and Travellers</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Packages</a></li>
+                <li><a href="{{ url_for('destination') }}">Destination</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                <!-- Add more navigation items as needed -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <p>Welcome to our platform where you can explore and purchase various travel packages.</p>
+        <p>Choose your desired destination and start planning your dream vacation!</p>
+    </main>
+    <footer>
+        <p>&copy; 2024 Travel Packages. All rights reserved.</p>
+    </footer>
+</body>
+</html>

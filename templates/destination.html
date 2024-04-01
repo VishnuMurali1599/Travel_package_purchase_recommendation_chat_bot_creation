@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destination Details</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Reset CSS */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body styles */
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      height: 100vh;
+      margin: 0; /* Remove default body margin */
+      background-image: url("https://wallpaperaccess.com/full/407997.jpg"); /* Replace with your image path */
+      background-size: cover; /* Resize image to cover entire screen */
+      background-position: center; /* Center the image */
+      background-repeat: no-repeat; /* Prevent image repetition */
+    }
+
+    /* Container styles */
+    .container {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      padding: 20px;
+      background-color: #ADD8E6; /* Adjust background color if needed */
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Header styles */
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      color: #333;
+    }
+
+    /* Form styles */
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group {
+      margin-bottom: 10px; /* Adjust spacing between fields */
+      display: flex;
+      align-items: center;
+    }
+
+    .form-group label {
+      width: 80px; /* Label width */
+      font-size: 0.9rem;
+      color: #555;
+      margin-right: 10px; /* Spacing between label and input */
+    }
+
+    input[type="text"] {
+      padding: 8px;
+      font-size: 0.9rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      flex: 1; /* Allow input to fill remaining space */
+    }
+
+    button[type="submit"] {
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 20px; /* Spacing after form fields */
+    }
+
+    button[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Enter Destination Details</h1>
+    </header>
+    <form action="/destination" method="post">
+      <div class="form-group">
+        <label for="country">Country:</label>
+        <input type="text" id="country" name="country" required>
+      </div>
+      <div class="form-group">
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" required>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  <h1>Destination Details</h1>
+  <!-- Display the DataFrame HTML -->
+  {{ table|safe }}
+</body>
+</html>
