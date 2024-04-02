@@ -36,10 +36,10 @@ def destination():
 def contact():
     return render_template('contact.html')
 
-# Route to handle form submission
-@app.route('/purchase', methods=['POST'])
-def purchase():
-    return redirect('/')
+
+@app.route('/package')
+def package():
+    return render_template("new_package.html")
 
 if __name__ == '__main__':
     app.run(debug=True)
