@@ -24,3 +24,5 @@ def chatbot():
         <li>State: {{ state }}</li>
         <li>Number of days: {{ number_of_days }}</li>
     </ul>
+    
+https://www.bandt.com.au/information/uploads/2021/04/Expedia-logo-1260x840.jpg

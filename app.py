@@ -1,6 +1,7 @@
 # app.py
 from flask import Flask, render_template, request, redirect, jsonify
 import pandas as pd
+from src.pipeline.predict_pipeline import CustomData,PredictPipeline
 
 app = Flask(__name__)
 
@@ -37,9 +38,37 @@ def contact():
     return render_template('contact.html')
 
 
-@app.route('/package')
+@app.route('/package',methods=['GET','POST'])
 def package():
-    return render_template("new_package.html")
+    if request.method=='GET':
+        return render_template('welcome_page.html')
+    else:
+        data=CustomData(
+            Age=request.form.get('Age'),
+            TypeofContact=request.form.get('TypeofContact'),
+            CityTier=request.form.get('CityTier'),
+            Occupation=request.form.get('Occupation'),
+            Gender=request.form.get('Gender'),
+            NumberOfPersonVisiting=float(request.form.get('NumberOfPersonVisiting')),
+            PreferredPropertyStar=float(request.form.get('PreferredPropertyStar')),
+            MaritalStatus=request.form.get('MaritalStatus'),
+            NumberOfTrips=request.form.get('NumberOfTrips'),
+            Passport=request.form.get('Passport'),
+            OwnCar=request.form.get('OwnCar'),
+            NumberOfChildrenVisiting=request.form.get('NumberOfChildrenVisiting'),
+            Designation=float(request.form.get('Designation')),
+            MonthlyIncome=float(request.form.get('MonthlyIncome'))
+        )
+        
+        pred_df=data.get_data_as_data_frame()
+        print(pred_df)
+        print("Before Prediction")
+
+        predict_pipeline=PredictPipeline()
+        print("Mid Prediction")
+        results=predict_pipeline.predict(pred_df)
+        print("after Prediction")
+        return render_template("new_package.html")
 
 if __name__ == '__main__':
     app.run(debug=True)
