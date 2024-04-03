@@ -24,6 +24,7 @@ def welcome():
         "fulfillmentText":"Can expect Travel cost around {} USD".format(round(cost[0],2))
     }
     print(cost)
+    print(response)
     #return "<h1> hello </h1>"
     return jsonify(response)
 
@@ -39,7 +40,7 @@ def transportation_cost(capital: str, country: str, number: int, transport_mode:
 
     # Check if there are any matching records
     
-    with open('trained_pipeline_trans.pkl', 'rb') as file:
+    with open('artifacts\trained_pipeline_trans.pkl', 'rb') as file:
         loaded_pipeline = pickle.load(file)
         
         new_data = pd.DataFrame({"Duration": [number], "Transportation type": [transport_mode],

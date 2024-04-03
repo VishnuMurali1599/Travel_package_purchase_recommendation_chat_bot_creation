@@ -28,11 +28,11 @@ class DataTransformation:
         
         '''
         try:
-            numerical_columns = ['Age', 'NumberOfPersonVisiting', 'PreferredPropertyStar',
+            numerical_columns = ['Age', 'NumberOfPersonVisiting', 'PreferredPropertyStar', 'Passport', 'OwnCar',
                                  'NumberOfTrips', 'NumberOfChildrenVisiting', 'MonthlyIncome']
             
             categorical_columns = ['TypeofContact', 'CityTier', 'Occupation', 'Gender', 'MaritalStatus',
-                                   'Passport', 'OwnCar', 'Designation']
+                                    'Designation']
 
             num_pipeline= Pipeline(
                 steps=[

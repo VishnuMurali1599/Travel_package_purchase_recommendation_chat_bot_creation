@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Efficiency Prediction</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: auto; /* Change this line to enable body overflow */
+        }
+        
+        .container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 400px;
+            text-align: center;
+            overflow-y: auto; /* Add this line to enable vertical scrolling */
+        }
+        
+
+        h1, h2 {
+            color: #333;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        .form-label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            color: #fff;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer-container1">
+      <div class="container">
+        <div class="login">
+          <h1>Tour Package Prediciton</h1>
+  
+          <form action="{{ url_for('package')}}" method="POST">
+  
+              <div class="mb-3">
+                <label class="form-label">Enter Age</label>
+                <input class="form-control" type="number" name="Age"
+                    placeholder="Enter the Income " min='0' max='100' />
+            ` </div>
+  
+              <div class="mb-3">
+                  <label class="form-label">Type of Contact</label>
+                  <select class="form-control" name="TypeofContact" placeholder="Select Type of Contact" required>
+                      <option class="placeholder" selected disabled value="">Select Type of Contact</option>
+                      <option value="Self Enquiry">
+                        Self Enquiry
+                      </option>
+                      <option value="Company Invited">
+                        Company Invited
+                      </option>
+                  </select>
+              </div>
+              
+              <div class="mb-3">
+                  <label class="form-label">Enter City Tier (1,2,3) </label>
+                  <input class="form-control" type="number" name="CityTier"
+                      placeholder="Enter the City Tier " min='0' max='4' />
+              </div>
+  
+              <div class="mb-3">
+                <label class="form-label">Type of Contact</label>
+                <select class="form-control" name="Occupation" placeholder="Select Occupation" required>
+                    <option class="placeholder" selected disabled value="">Select Occupation</option>
+                    <option value="Salaried">
+                      Salaried
+                    </option>
+                    <option value="Small Business">
+                      Small Business
+                    </option>
+                    <option value="Large Business">
+                      Large Business
+                    </option>
+                </select>
+              </div>
+  
+              <div class="mb-3">
+                <label class="form-label">Select Gender</label>
+                <select class="form-control" name="Gender" placeholder="Select Gender" required>
+                    <option class="placeholder" selected disabled value="">Select Gender</option>
+                    <option value="Male">
+                      Male
+                    </option>
+                    <option value="Female">
+                      Female
+                    </option>
+                </select>
+              </div>
+  
+              <div class="mb-3">
+                  <label class="form-label">Number Of Person Visiting (1,2,3,4,5)</label>
+                  <input class="form-control" type="number" name="NumberOfPersonVisiting"
+                      placeholder="Enter Number of Person Visiting" min='0' max='5 ' />
+              </div>
+              <div class="mb-3">
+                  <label class="form-label"> Preferred Property Star (3,4,5) </label>
+                  <input class="form-control" type="number" name="PreferredPropertyStar"
+                      placeholder="Enter the Preferred Property Star" min='0' max='5' />
+              </div>
+  
+              <div class="mb-3">
+                <label class="form-label">Select MaritalStatus</label>
+                <select class="form-control" name="MaritalStatus" placeholder="Select Marital Status" required>
+                    <option class="placeholder" selected disabled value="">Select Marital Status</option>
+                    <option value="Married">
+                      Married
+                    </option>
+                    <option value="Divorced">
+                      Divorced
+                    </option>
+                    <option value="Married">
+                      Married
+                    </option>
+                    <option value="Unmarried">
+                      Unmarried
+                    </option>
+                </select>
+              </div>
+  
+              <div class="mb-3">
+                  <label class="form-label">Number Of Trips</label>
+                  <input class="form-control" type="number" name="NumberOfTrips"
+                      placeholder="Enter Number Of Trips" min='0' max='10' />
+              </div>
+  
+              <div class="mb-3">
+                  <label class="form-label">Passport</label>
+                  <input class="form-control" type="number" name="Passport"
+                      placeholder=" Passport (0 and 1)" min='0' max='1' />
+              </div>
+  
+              <div class="mb-3">
+                  <label class="form-label">Own Car</label>
+                  <input class="form-control" type="number" name="OwnCar"
+                      placeholder="Own Car (0 and 1)" min='0' max='1' />
+              </div>
+  
+              <div class="mb-3">
+                  <label class="form-label">Number Of Children Visiting</label>
+                  <input class="form-control" type="number" name="NumberOfChildrenVisiting"
+                      placeholder="Enter Number Of Children Visiting (0,1,2,3,4)" min='0' max='4' />
+              </div>
+  
+              <div class="mb-3">
+                <label class="form-label">Select Designation</label>
+                <select class="form-control" name="Designation" placeholder="Select Designation" required>
+                    <option class="placeholder" selected disabled value="">Select Designation</option>
+                    <option value="Executive">
+                      Executive
+                    </option>
+                    <option value="Manager">
+                      Manager
+                    </option>
+                    <option value="Senior Manager">
+                      Senior Manager
+                    </option>
+                    <option value="AVP">
+                      AVP
+                    </option>
+                    <option value="VP">
+                      VP
+                    </option>
+                </select>
+              </div>
+              <div class="mb-3">
+                  <label class="form-label">Monthly Income</label>
+                  <input class="form-control" type="number" name="MonthlyIncome"
+                      placeholder="Enter MonthlyIncome" min='0' max='1000000' />
+              </div>
+          </form>
+  
+          <h2>
+              {% if results == 0 %}
+                  Result is 0: The customer will have negative attitude towards the new product.
+              {% elif results == 1 %}
+                  Result is 1: The customer will have postive attitude towards the new product.
+              {% endif %}
+          </h2>
+    </div>
+  </body>
+</html>

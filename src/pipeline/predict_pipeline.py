@@ -10,15 +10,17 @@ class PredictPipeline:
 
     def predict(self,features):
         try:
-            #model_path=os.path.join("artifacts","model.pkl")
-            #preprocessor_path=os.path.join('artifacts','preprocessor.pkl')
-            model_path = "artifacts\model.pkl"
-            preprocessor_path = 'artifacts\proprocessor.pkl'
+            model_path=os.path.join("artifacts","model.pkl")
+            preprocessor_path=os.path.join('artifacts','proprocessor.pkl')
+            #model_path = "artifacts\model.pkl"
+            #preprocessor_path = 'artifacts\proprocessor.pkl'
             print("Before Loading")
             model=load_object(file_path=model_path)
             preprocessor=load_object(file_path=preprocessor_path)
+            print(preprocessor)
             print("After Loading")
             data_scaled=preprocessor.transform(features)
+            print(data_scaled)
             preds=model.predict(data_scaled)
             return preds
         
@@ -27,18 +29,19 @@ class PredictPipeline:
 
 class CustomData:
     def __init__(  self,
-        Age: str,
+        Age: float,
         TypeofContact: str,
-        CityTier:float,
-        Occupation: int,
-        Gender: int,
+        CityTier:int,
+        Occupation: str,
+        Gender: str,
         NumberOfPersonVisiting: int,
-        PreferredPropertyStar: int,
-        MaritalStatus: float,
+        PreferredPropertyStar: float,
+        MaritalStatus: str,
         NumberOfTrips: float,
-        Passport: float,
+        Passport: int,
+        OwnCar:int,
         NumberOfChildrenVisiting: float,
-        Designation: float,
+        Designation: str,
         MonthlyIncome: float
         ):
 
@@ -61,6 +64,8 @@ class CustomData:
         self.NumberOfTrips = NumberOfTrips
 
         self.Passport = Passport
+        
+        self.OwnCar = OwnCar
 
         self.NumberOfChildrenVisiting = NumberOfChildrenVisiting
 
@@ -82,6 +87,7 @@ class CustomData:
                 "MaritalStatus": [self.MaritalStatus],
                 "NumberOfTrips": [self.NumberOfTrips],
                 "Passport": [self.Passport],
+                "OwnCar":[self.OwnCar],
                 "NumberOfChildrenVisiting": [self.NumberOfChildrenVisiting],
                 "Designation": [self.Designation],
                 "MonthlyIncome": [self.MonthlyIncome]
