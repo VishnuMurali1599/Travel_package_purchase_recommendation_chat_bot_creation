@@ -5,28 +5,31 @@ import pickle
 app = Flask(__name__)
 
 # Route for the welcome page
-@app.route('/',methods=['POST'])
+@app.route('/',methods=['GET','POST'])
 def welcome():
-    data = request.get_json()
-    capital = data['queryResult']['parameters']['geo-capital'][0]
-    country = data['queryResult']['parameters']['geo-country'][0]
-    number = data['queryResult']['parameters']['number'][0]
-    transport_mode = data['queryResult']['parameters']['City-countrydetails'][0]
-    
-    print(capital)
-    print(country)
-    print(number)
-    print(transport_mode)
-    
-    cost = transportation_cost(capital,country,number,transport_mode)
-    
-    response = {
-        "fulfillmentText":"Can expect Travel cost around {} USD".format(round(cost[0],2))
-    }
-    print(cost)
-    print(response)
-    #return "<h1> hello </h1>"
-    return jsonify(response)
+    if request.method == 'GET':
+        return render_template('welcome_page.html')
+    else:
+        data = request.get_json()
+        capital = data['queryResult']['parameters']['geo-capital'][0]
+        country = data['queryResult']['parameters']['geo-country'][0]
+        number = data['queryResult']['parameters']['number'][0]
+        transport_mode = data['queryResult']['parameters']['City-countrydetails'][0]
+        
+        print(capital)
+        print(country)
+        print(number)
+        print(transport_mode)
+        
+        cost = transportation_cost(capital,country,number,transport_mode)
+        
+        response = {
+            "fulfillmentText":"Can expect Travel cost around {} USD".format(round(cost[0],2))
+        }
+        print(cost)
+        print(response)
+        #return "<h1> hello </h1>"
+        return  jsonify(response)
 
 def transportation_cost(capital: str, country: str, number: int, transport_mode: str):
     capital = capital.capitalize()
@@ -61,7 +64,21 @@ def transportation_cost(capital: str, country: str, number: int, transport_mode:
             return transportation_cost
         else:
             return "Sorry we are unable to fetch the cost for the provided country"
+        
+        
+@app.route('/destination', methods=['GET', 'POST'])
+def destination():
+    pass
 
 
-if __name__=="__main__":
+@app.route('/contact')
+def contact():
+    pass
+
+
+@app.route('/package',methods=['GET','POST'])
+def package():
+    pass
+
+if __name__ == '__main__':
     app.run(debug=True)

@@ -3,57 +3,66 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tours and Travels Packages Recommendation for all age categories</title>
+<title>Tours and Travels Packages by Age</title>
 <style>
   body {
     font-family: Arial, sans-serif;
-    background-color: #ADD8E6;
+    background-color: #ffff99;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
-  
+
   .outer-container {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     padding: 10px;
     box-sizing: border-box;
   }
-  
+
+  .outer-container1 {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; /* Align packages to the right */
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
   .container {
-    max-width: 800px;
+    max-width: 400px;
     padding: 0 20px;
   }
-  
+
   .package {
-    background-color: #ffff99;
+    background-color: #f5d142;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
     margin-bottom: 20px;
   }
-  
+
   .package h2 {
     font-size: 24px;
     margin-bottom: 10px;
     color: #333;
   }
-  
+
   .package p {
     color: #666;
     margin-bottom: 10px;
   }
-  
+
   .package ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
   }
-  
+
   .package ul li {
     margin-bottom: 5px;
   }
-  
+
   .package .btn {
     background-color: #0077ff;
     color: #00d5ff;
@@ -64,136 +73,22 @@
     text-transform: uppercase;
     font-weight: bold;
   }
-  
-  .package img {
-    width: 100%; /* Set image width to fill container */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 10px; /* Optional: Apply rounded corners to images */
-  }
-  
-  .login {
-    max-width: 400px;
-    padding: 20px;
-    background-color: #ffff99;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .login h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  .login form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .login .mb-3 {
-    margin-bottom: 20px;
-  }
-  
-  .login .form-label {
-    font-weight: bold;
-  }
-  
-  .login .form-control {
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    margin-top: 5px;
-    box-sizing: border-box;
-  }
-  
-  .login .btn-primary {
-    background-color: #0077ff;
-    color: #f5d142;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-transform: uppercase;
-    font-weight: bold;
-  }
 </style>
 </head>
 <body>
-
-<div class="outer-container">
-  <div class="container">
-    <div class="package">
-      <h2>India Honeymoon Package</h2>
-      <p>Explore romantic destinations in India with VM Tours</p>
-      <ul>
-        <li>Beautiful and secluded spots</li>
-        <li>Luxury accommodation</li>
-        <li>Special honeymoon experiences</li>
-      </ul>
-      <img src="https://th.bing.com/th/id/OIP.SndY07Fqqz69eYwPsxvOAwHaE7?rs=1&pid=ImgDetMain" alt="India Honeymoon Package Image">
-      <button class="btn">Recommend Now</button>
-    </div>
-
-    <div class="package">
-      <h2>Educational Tour Packages</h2>
-      <p>Enriching educational tours for students and educators</p>
-      <ul>
-        <li>Visits to historical sites and museums</li>
-        <li>Engaging workshops and lectures</li>
-        <li>Expert-guided tours</li>
-      </ul>
-      <img src="https://indiaoutbound.info/wp-content/uploads/2021/06/Educational-Tours.jpg" alt="Educational Tour Packages Image">
-      <button class="btn">Recommend Now</button>
-    </div>
-
-    <div class="package">
-      <h2>North India Tour Packages</h2>
-      <p>Discover the diverse culture and landscapes of North India</p>
-      <ul>
-        <li>Visit iconic landmarks like the Taj Mahal</li>
-        <li>Experience traditional festivals</li>
-        <li>Explore hill stations and ancient cities</li>
-      </ul>
-      <img src="https://i0.wp.com/www.tusktravel.com/blog/wp-content/uploads/2020/01/North-East-Tourism.jpg?w=800&ssl=1" alt="North India Tour Packages Image">
-      <button class="btn">Recommend Now</button>
-    </div>
-
-    <div class="package">
-      <h2>South India Tour Packages</h2>
-      <p>Experience the rich heritage and natural beauty of South India</p>
-      <ul>
-        <li>Explore backwaters and serene beaches</li>
-        <li>Discover ancient temples and spice plantations</li>
-        <li>Enjoy traditional art forms and cuisines</li>
-      </ul>
-      <img src="https://cdn1.tripoto.com/media/filter/nxxl/img/1429685/Image/1568274030_south_india_web.jpg" alt="South India Tour Packages Image">
-      <button class="btn">Recommend Now</button>
-    </div>
-
-    <div class="package">
-      <h2>East India Tour Packages</h2>
-      <p>Embark on a journey through the scenic landscapes of East India</p>
-      <ul>
-        <li>Visit tea gardens and wildlife sanctuaries</li>
-        <li>Explore tribal culture and traditions</li>
-        <li>Experience the charm of historical cities</li>
-      </ul>
-      <img src="https://th.bing.com/th/id/R.58833f6cbc9ce6eaed131a582f864fca?rik=0WwOwxhtRg1jEg&riu=http%3a%2f%2fwww.incredibleindiaexcursions.com%2fextraimages%2fDarjeeling.jpg&ehk=GkNMPEp3qYw%2feVeEjHiZTvsSWmwzVxQ2qMuJCO%2bMfBw%3d&risl=&pid=ImgRaw&r=0" alt="East India Tour Packages Image">
-      <button class="btn">Recommend Now</button>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="login">
-      <h1>Tour Package Prediction</h1>
-
-      <form action="{{ url_for('package')}}" method="POST">
-          <div class="mb-3">
-            <label class="form-label">Enter Age</label>
-            <input class="form-control" type="number" name="Age" placeholder="Enter Age" min="0" max="100" required>
-          </div>
-
+<div class="outer-container1">
+    <div class="container">
+      <div class="login">
+        <h1>Customer Personality Prediction</h1>
+  
+        <form action="{{ url_for('package')}}" method="post">
+  
+            <div class="mb-3">
+              <label class="form-label">Enter Age</label>
+              <input class="form-control" type="number" name="Age"
+                  placeholder="Enter the Income " min='0' max='100' />
+            </div>
+  
             <div class="mb-3">
                 <label class="form-label">Type of Contact</label>
                 <select class="form-control" name="TypeofContact" placeholder="Select Type of Contact" required>
@@ -212,7 +107,7 @@
                 <input class="form-control" type="number" name="CityTier"
                     placeholder="Enter the City Tier " min='0' max='4' />
             </div>
-
+  
             <div class="mb-3">
               <label class="form-label">Type of Contact</label>
               <select class="form-control" name="Occupation" placeholder="Select Occupation" required>
@@ -228,7 +123,7 @@
                   </option>
               </select>
             </div>
-
+  
             <div class="mb-3">
               <label class="form-label">Select Gender</label>
               <select class="form-control" name="Gender" placeholder="Select Gender" required>
@@ -241,7 +136,7 @@
                   </option>
               </select>
             </div>
-
+  
             <div class="mb-3">
                 <label class="form-label">Number Of Person Visiting (1,2,3,4,5)</label>
                 <input class="form-control" type="number" name="NumberOfPersonVisiting"
@@ -252,7 +147,7 @@
                 <input class="form-control" type="number" name="PreferredPropertyStar"
                     placeholder="Enter the Preferred Property Star" min='0' max='5' />
             </div>
-
+  
             <div class="mb-3">
               <label class="form-label">Select MaritalStatus</label>
               <select class="form-control" name="MaritalStatus" placeholder="Select Marital Status" required>
@@ -271,31 +166,31 @@
                   </option>
               </select>
             </div>
-
+  
             <div class="mb-3">
                 <label class="form-label">Number Of Trips</label>
                 <input class="form-control" type="number" name="NumberOfTrips"
                     placeholder="Enter Number Of Trips" min='0' max='10' />
             </div>
-
+  
             <div class="mb-3">
                 <label class="form-label">Passport</label>
                 <input class="form-control" type="number" name="Passport"
                     placeholder=" Passport (0 and 1)" min='0' max='1' />
             </div>
-
+  
             <div class="mb-3">
                 <label class="form-label">Own Car</label>
                 <input class="form-control" type="number" name="OwnCar"
                     placeholder="Own Car (0 and 1)" min='0' max='1' />
             </div>
-
+  
             <div class="mb-3">
                 <label class="form-label">Number Of Children Visiting</label>
                 <input class="form-control" type="number" name="NumberOfChildrenVisiting"
                     placeholder="Enter Number Of Children Visiting (0,1,2,3,4)" min='0' max='4' />
             </div>
-
+  
             <div class="mb-3">
               <label class="form-label">Select Designation</label>
               <select class="form-control" name="Designation" placeholder="Select Designation" required>
@@ -322,13 +217,8 @@
                 <input class="form-control" type="number" name="MonthlyIncome"
                     placeholder="Enter MonthlyIncome" min='0' max='1000000' />
             </div>
-            <div class="mb-3">
-              <input class="btn btn-primary" type="submit" value="Predict" required />
-            </div>
         </form>
-
-        
-
+  
         <h2>
             {% if results == 0 %}
                 Result is 0: The customer will have negative attitude towards the new product.
@@ -336,7 +226,10 @@
                 Result is 1: The customer will have postive attitude towards the new product.
             {% endif %}
         </h2>
+      </div>
+    </div>
   </div>
-</body>
-</html>
-
+  
+  </body>
+  </html>
+  

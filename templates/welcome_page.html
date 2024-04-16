@@ -9,11 +9,11 @@
         body {
             margin: 0;
             padding: 0;
+            font-family: 'Poppins', sans-serif;
+            color: black;
             background-image: url('https://image.slidesdocs.com/responsive-images/background/nature-fashion-colorful-travel-travel-agency-color-powerpoint-background_c904a89ad6__960_540.jpg');
             background-size: cover;
             background-position: center;
-            font-family: 'Poppins', sans-serif;
-            color: black;
         }
         header {
             display: flex;
@@ -22,7 +22,7 @@
             padding: 20px;
         }
         header h1 {
-            font-size: 1.2rem;
+            font-size: 1.6rem;
             margin-left: 20px;
             color: #000000;
         }
@@ -36,7 +36,7 @@
             display: flex;
         }
         nav li {
-            margin-right: 5px;
+            margin-right: 15px;
         }
         nav a {
             text-decoration: none;
@@ -51,28 +51,12 @@
             justify-content: center;
             height: calc(70vh - 100px);
             text-align: center;
-            margin-top: 0px; /* Adjust to move content slightly below */
+            margin-top: 0px;
         }
         main p {
             font-size: 1.0rem;
             margin-bottom: 0px;
-            font-family: 'Black 900 Italic', sans-serif; /* Use Google Fonts for cute fonts */
-        }
-        form {
-            margin-top: 10px;
-        }
-        input[type="text"] {
-            padding: 8px;
-            font-size: 1rem;
-        }
-        button {
-            padding: 8px 20px;
-            font-size: 1rem;
-            background-color: #ffcc00;
-            color: #333;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+            font-family: 'Black 900 Italic', sans-serif;
         }
         footer {
             position: absolute;
@@ -81,6 +65,15 @@
             background-color: rgba(0, 0, 0, 0.5);
             padding: 2px 0;
             text-align: center;
+            color: #fff;
+        }
+        iframe {
+            position: absolute;
+            left: 20px; /* Adjust left position as needed */
+            bottom: 60px; /* Adjust bottom position as needed */
+            width: 30%; /* Adjust the width as needed */
+            height: 230px; /* Adjust the height as needed */
+            border: none; /* Remove iframe border */
         }
     </style>
 </head>
@@ -101,6 +94,7 @@
         <p>Welcome to our platform where you can explore and purchase various travel packages.</p>
         <p>Choose your desired destination and start planning your dream vacation!</p>
     </main>
+    <iframe width="350" height="430" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/191869b5-ceb6-4592-95f1-c2d9b115859c"></iframe>
     <footer>
         <p>&copy; 2024 Travel Packages. All rights reserved.</p>
     </footer>
